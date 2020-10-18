@@ -19,7 +19,7 @@ function writePassword() {
   } 
   
   else {
-    // prompts choice of characters to use
+    // Prompts choice of characters to use
     var numberChosen = confirm("Use numbers?");
     var lowerChosen = confirm("Use lower case letters?");
     var upperChosen = confirm("Use upper case letters?");
@@ -27,13 +27,27 @@ function writePassword() {
 };
 
 // If no option is chosen. Validates at least one choice
-if (numberChosen && lowerChosen && upperChosen && specialChosen === false {
-    var chosen = alert("Choose at least one option");
-
+if (numberChosen && lowerChosen && upperChosen && specialChosen === false) {
+    var chosen = alert("Must choose at least one option");
 }
-
-// If all four options are chosen
+// If all four are chosen
 else if (numberChosen && lowerChosen && upperChosen && specialChosen === true) {
-
-    chosen = numbers + lowerCase + upperCase + special;
+  chosen = numbers + lowerCase + upperCase + special;
+}
+// When 3 different options are picked
+// Numbers, lower case, and upper case are chosen
+else if (numberChosen && lowerChosen && upperChosen === true) {
+  chosen = numbers + lowerCase + upperCase;
+}
+// Lower case, upper case, and special characters are chosen
+else if (lowerChosen && upperChosen && specialChosen === true) {
+  chosen = lowerCase + upperCase + special;
+}
+// Numbers, upper case, and special characters are chosen
+else if (numberChosen && upperChosen && specialChosen === true) {
+  chosen = numbers + upperCase + special;
+} 
+// Numbers, lower case, and special characters are chosen
+else if (numberChosen && lowerChosen && specialChosen === true) {
+  chosen = numbers + lowerCase + special;
 }
