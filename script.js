@@ -73,6 +73,27 @@ else if (lowerChosen && specialChosen === true) {
   chosen = lowerCase + special;
 }
 // Upper Case and special characters chosen
-else if (upperChosen && specialChosen == true) {
+else if (upperChosen && specialChosen === true) {
   chosen = upperCase + special;
+}
+// When only 1 option is picked
+// Numbers chosen
+else if (numberChosen === true) {
+  chosen = numbers;
+}
+// Lower case chosen
+else if (lowerChosen === true) {
+  chosen = lowerCase;
+}
+// Upper case chosen
+else if (upperChosen === true) {
+  chosen = upperCase;
+}
+// Special characters chosen
+else if (specialChosen === true) {
+  chosen = special;
+}
+// Placeholder for event that there is a bug with user input
+else {
+  alert("Oops how did you even get here?");
 };
