@@ -16,9 +16,10 @@ function writePassword() {
   if (length < 8 || length > 128) {
     alert("Password must be 8 to 128 characters in length!");
     var length = prompt("Choose character length between 8 and 128");
-  } 
+    var passwordLength = alert("you have chosen a character length of:" + length);
+  };
   
-  else {
+  if (length >= 8 && length <= 128) {
     // Prompts choice of characters to use
     var numberChosen = confirm("Use numbers?");
     var lowerChosen = confirm("Use lower case letters?");
@@ -96,4 +97,5 @@ else if (specialChosen === true) {
 // Placeholder for event that there is a bug with user input
 else {
   alert("Oops how did you even get here?");
+};
 };
