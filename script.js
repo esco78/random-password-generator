@@ -51,3 +51,28 @@ else if (numberChosen && upperChosen && specialChosen === true) {
 else if (numberChosen && lowerChosen && specialChosen === true) {
   chosen = numbers + lowerCase + special;
 }
+// When only 2 different options are picked
+// Numbers and lower case chosen
+else if (numberChosen && lowerChosen === true) {
+  chosen = numbers + lowerCase;
+}
+// Numbers and upper case chosen
+else if (numberChosen && upperChosen === true) {
+  chosen = numbers + upperCase;
+}
+// Numbers and special characters chosen
+else if (numberChosen && specialChosen === true) {
+  chosen = numbers + special;
+}
+// Lower and upper case chosen
+else if (lowerChosen && upperChosen === true) {
+  chosen = lowerCase + upperCase;
+}
+// Lower and special characters chosen
+else if (lowerChosen && specialChosen === true) {
+  chosen = lowerCase + special;
+}
+// Upper Case and special characters chosen
+else if (upperChosen && specialChosen == true) {
+  chosen = upperCase + special;
+};
